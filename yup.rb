@@ -18,15 +18,15 @@ class Yup < Sinatra::Base
   post '/forward' do
     puts params
     puts 'forward called'
-    FayeClient.client.publish('/commands', text: 'forward') if params[:key] == 'lazysecret'
+    FayeClient.client.publish('/commands', text: 'forward')
   end
 
-  post '/back' do
-    FayeClient.client.publish('/commands', text: 'reverse') if params[:key] == 'lazysecret'
+  post '/reverse' do
+    FayeClient.client.publish('/commands', text: 'reverse')
   end
   
-  post '/restart' do 
-    FayeClient.client.publish('/commands', text: 'begin') if params[:key] == 'lazysecret'
+  post '/restart' do
+    FayeClient.client.publish('/commands', text: 'begin')
   end
 
   get '/error' do
