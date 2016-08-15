@@ -16,6 +16,8 @@ class Yup < Sinatra::Base
   end
 
   post '/forward' do
+    puts params
+    puts 'forward called'
     FayeClient.client.publish('/commands', text: 'forward') if params[:key] == 'lazysecret'
   end
 
