@@ -5,7 +5,7 @@ class FayeClient
   include Singleton
 
   def self.client
-    @client ||= Faye::Client.new('http://localhost:4567/faye')
+    @client ||= Faye::Client.new('https://hipsterelixer.com/faye')
   end
 end
 
