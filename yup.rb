@@ -18,6 +18,7 @@ class Yup < Sinatra::Base
   post '/forward' do
     puts params
     puts 'forward called'
+    binding.pry
     FayeClient.client.publish('/commands', text: 'forward')
   end
 
