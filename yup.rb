@@ -1,13 +1,11 @@
 require 'rubygems'
 require 'sinatra'
 require 'haml'
-require 'boxr'
 require 'pry'
 require 'thin'
-require_relative '../global_utils/global_utils'
 
 class Yup < Sinatra::Base
-  set env: :production
+  set env: :development
   set logging: true
   set port: 4567
   set bind: '0.0.0.0'

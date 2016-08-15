@@ -1,4 +1,5 @@
 require 'faye'
+require 'singleton'
 require File.expand_path('../yup', __FILE__)
 class FayeClient
   include Singleton
