@@ -23,59 +23,6 @@
         %span
           Developer Roadmap ideas for 2016-2017
 
-      #Security.step.slide{"data-x" => "-1000", "data-y" => "-1500"}
-        %h2
-          Securty
-        %hr
-        %ol
-          %li 
-            Rogue Access Point
-            (
-            %a{href: 'https://www.wifipineapple.com/'}
-              Pineapple
-            )
-          %li Red team
-          %li
-            Phishing
-            (
-            %a{href: 'https://getgophish.com/'}
-              Gophish
-            )
-          %li
-            Intrusion Detection System
-            (
-            %a{href: 'https://www.bro.org/'}
-              BRO
-            )
-          %li Random USB
-          %li
-            OSINT High profile staff
-          %li
-            OSINT Darkweb
-            (
-            %a{href: 'https://github.com/Netflix/Scumblr'}
-              Scumblr
-            )
-          %li
-            Web Vulnerabilty
-            (
-            %a{href: 'http://vulnreport.io/'}
-              vulnreport
-            )
-          %li Windows 10 Vulnerability testing
-          %li Device Auditing
-          %li Personel Training
-          %li
-            Network Monitoring
-            (
-            %a{href: 'https://securityonion.net/'}
-              Security Onion
-            )
-
-          %li Honeypot
-          %li Policies & Standards
-          %li Incident Response Documentation
-
       #Data.step.slide{"data-x" => "0", "data-y" => "-1500"}
         %h2
           Data
@@ -176,6 +123,61 @@
           %li
             provide resource/interface to update current clients
 
+      #Security.step.slide{"data-x" => "5000", "data-y" => "-1500"}
+        %h2
+          Securty
+        %hr
+        %ol
+          %li 
+            Rogue Access Point
+            (
+            %a{href: 'https://www.wifipineapple.com/'}
+              Pineapple
+            )
+          %li Red team
+          %li
+            Phishing
+            (
+            %a{href: 'https://getgophish.com/'}
+              Gophish
+            )
+          %li
+            Intrusion Detection System
+            (
+            %a{href: 'https://www.bro.org/'}
+              BRO
+            )
+          %li Random USB
+          %li
+            (
+            %a{href: 'https://github.com/upgoingstar/datasploit'}
+              OSINT High profile staff
+            )
+          %li
+            OSINT Darkweb
+            (
+            %a{href: 'https://github.com/Netflix/Scumblr'}
+              Scumblr
+            )
+          %li
+            Web Vulnerabilty
+            (
+            %a{href: 'http://vulnreport.io/'}
+              vulnreport
+            )
+          %li Windows 10 Vulnerability testing
+          %li Device Auditing
+          %li Personel Training
+          %li
+            Network Monitoring
+            (
+            %a{href: 'https://securityonion.net/'}
+              Security Onion
+            )
+          %li Honeypot
+          %li Policies & Standards
+          %li Incident Response Documentation
+
       #big.step{"data-rotate" => "180", "data-scale" => "6", "data-x" => "3500", "data-y" => "2100"}
         %p
           Confront complex problems...
@@ -228,10 +230,13 @@
       var client = new Faye.Client('/faye');
       subscription = client.subscribe('/commands', function(message) {
         if (message == 'forward'){
+          console.log('forward')
           impress().next()
         } else if (message == 'reverse'){
+          console.log('reverse')
           impress().prev()
         } else if (message == 'begin') {
+          console.log('beginning')
           impress().goto(0)
         }
       });
