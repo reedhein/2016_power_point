@@ -5,7 +5,7 @@ class FayeClient
   include Singleton
 
   def self.client
-    @client ||= Faye::Client.new('http://power_point:4567/faye')
+    @client ||= Faye::Client.new('http://172.17.0.2:4567/faye')
   end
 end
 
